@@ -3,9 +3,10 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 let passwordOneEl = document.getElementById("password-result1")
 let passwordTwoEl = document.getElementById("password-result2")
+let passwordLength = 15
 let randomPassword1 = ""
 let randomPassword2 = ""
-let passwordLength = 15
+
 
 function getRandomCharacter() {
     let randomChar1 = Math.floor(Math.random() * characters.length)
