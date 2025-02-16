@@ -3,7 +3,6 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 let passwordOneEl = document.getElementById("password-result1")
 let passwordTwoEl = document.getElementById("password-result2")
-let passwordlength = 15
 let randomPassword1 = ""
 let randomPassword2 = ""
 
@@ -15,7 +14,14 @@ function getRandomCharacter() {
 function generatePassword() {
     let randomPassword1 = ""
     let randomPassword2 = ""
-    for (let i = 0; i < passwordlength; i++) {
+    
+    const passwordLength = document.getElementById("length-input").value;
+
+    if (passwordLength < 8 || passwordLength > 20) {
+        document.getElementById("error-span").textContent = "The password must have 8 to 20 characters.";
+    } else {
+        document.getElementById("error-span").textContent = "";
+    for (let i = 0; i < ; i++) {
         randomPassword1 += getRandomCharacter()
         randomPassword2 += getRandomCharacter()
     }

@@ -1,22 +1,29 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Daniel's Password Generator</title>
     </head>
     <body>
         <div id="main">
         <div id="generate-password">
             <h1 id="password-title">Generate a <br><span class="password">random password</span></h1>
             <p>Never use an insecure password again.</p>
-            <button id="password-btn" onclick="generatePassword()">Generate passwords</button>
+            <label for="Password length" id="length-input-label">Password length</label>
+            <input type="number" id="length-input" name="Password length"></input>
+            <span id="error-span"></span>
+            <div id="btns"></div>
+              <button id="password-btn" onclick="generatePassword()">Generate passwords</button>
+              <button id="clear-btn" onclick="clearPassword()">Clear passwords</button>
+            </div>
         </div>
         <div id="results">
             <p id="password-result1"></p>
             <p id="password-result2"></p
         </div>
         </div>
-        <script src="index.js"></script>
     </body>
 </html>
